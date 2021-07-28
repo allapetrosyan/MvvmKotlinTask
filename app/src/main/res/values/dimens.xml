@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_title_size">24sp</dimen>
+    <dimen name="view_size">12dp</dimen>
+    <dimen name="image_size">16dp</dimen>
+    <dimen name="top_size">27dp</dimen>
+    <dimen name="sstart_size">6dp</dimen>
+    <dimen name="end_size">92dp</dimen>
+    <dimen name="heigh_size">82dp</dimen>
+    <dimen name="width_size">267dp</dimen>
+
+
+</resources>

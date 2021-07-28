@@ -1,0 +1,363 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mainImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+      >    </androidx.recyclerview.widget.RecyclerView>
+
+    <View
+        android:id="@+id/arrow"
+        android:layout_width="@dimen/view_size"
+        android:layout_height="@dimen/main_title_size"
+        android:layout_marginStart="@dimen/sstart_size"
+        android:layout_marginTop="@dimen/top_size"
+        android:background="@drawable/slack_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sstart_size"
+        android:text="Back"
+        android:textAppearance="@style/label"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@id/arrow"
+        app:layout_constraintStart_toEndOf="@id/arrow"
+        app:layout_constraintTop_toTopOf="@id/arrow"
+        tools:ignore="MissingConstraints" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainImage">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/image_size"
+            android:layout_marginEnd="@dimen/image_size">
+
+            <TextView
+                android:id="@+id/firsLineString"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/view_size"
+                android:text="@string/firsLineString"
+                android:textColor="@color/black"
+                android:textSize="@dimen/main_title_size"
+                app:layout_constraintEnd_toStartOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/busImg"
+                android:layout_width="@dimen/top_size"
+                android:layout_height="@dimen/main_title_size"
+                android:layout_marginStart="@dimen/top_size"
+                android:layout_marginTop="@dimen/main_title_size"
+                android:layout_marginEnd="@dimen/sstart_size"
+                android:background="@drawable/bus_image"
+                app:layout_constraintEnd_toEndOf="@id/delivery"
+                app:layout_constraintStart_toEndOf="@id/firsLineString"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/delivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/sstart_size"
+                android:layout_marginTop="@dimen/main_title_size"
+                android:text="@string/deliverystring"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/busImg"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tacoLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sstart_size"
+                android:text="@string/birria_taco"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/firsLineString"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/heart"
+                android:layout_width="100dp"
+                android:layout_height="@dimen/heigh_size"
+                android:layout_marginTop="@dimen/main_title_size"
+                android:background="@android:color/darker_gray"
+                android:foreground="@drawable/style"
+                android:foregroundGravity="center"
+
+                app:layout_constraintTop_toBottomOf="@id/tacoLine"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/heartTxtview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sstart_size"
+                android:text="@string/heart"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/heart"
+                app:layout_constraintStart_toStartOf="@id/heart"
+                app:layout_constraintTop_toBottomOf="@id/heart"
+                tools:ignore="MissingConstraints,NotSibling" />
+
+            <ImageView
+                android:id="@+id/share"
+                android:layout_width="100dp"
+                android:layout_height="@dimen/heigh_size"
+                android:layout_marginTop="@dimen/main_title_size"
+                android:background="@android:color/darker_gray"
+                android:foreground="@drawable/bus_image"
+                android:foregroundGravity="center"
+                app:layout_constraintEnd_toStartOf="@id/direction"
+                app:layout_constraintStart_toEndOf="@id/heart"
+                app:layout_constraintTop_toBottomOf="@id/tacoLine" />
+
+            <TextView
+                android:id="@+id/shareTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sstart_size"
+                android:text="@string/share"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/share"
+                app:layout_constraintStart_toStartOf="@id/share"
+                app:layout_constraintTop_toBottomOf="@id/share" />
+
+            <ImageView
+                android:id="@+id/direction"
+                android:layout_width="100dp"
+                android:layout_height="@dimen/heigh_size"
+                android:layout_marginTop="@dimen/main_title_size"
+                android:background="@android:color/darker_gray"
+                android:foreground="@drawable/bus_image"
+                android:foregroundGravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/share"
+                app:layout_constraintTop_toBottomOf="@id/tacoLine" />
+
+            <TextView
+                android:id="@+id/directionTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sstart_size"
+                android:text="@string/directions"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/direction"
+                app:layout_constraintStart_toStartOf="@id/direction"
+                app:layout_constraintTop_toBottomOf="@id/direction" />
+
+            <ImageView
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/sstart_size"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/directionTextview"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/adressLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/image_size"
+                android:text="@string/adress"
+                android:textColor="@color/adress_text_color"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line1"
+
+                tools:ignore="MissingConstraints,NotSibling" />
+
+            <TextView
+                android:id="@+id/metri"
+                android:layout_width="2dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35sp"
+                android:layout_marginTop="@dimen/image_size"
+                android:layout_marginEnd="@dimen/view_size"
+                android:text="@string/_350_m"
+                android:textColor="@color/metr_350"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/adressLine"
+                app:layout_constraintTop_toBottomOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/adressBottomline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sstart_size"
+                android:layout_marginEnd="@dimen/view_size"
+                android:text="@string/_941_e_mission_blvd_pomona_ca_91766"
+                android:textColor="@color/adress_text_color"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/adressLine"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/sstart_size"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/adressBottomline"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/websiteLine"
+                android:layout_width="@dimen/width_size"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_size"
+                android:layout_marginEnd="@dimen/view_size"
+                android:text="@string/website"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line2"
+
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/websitebottomLine"
+                android:layout_width="@dimen/width_size"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sstart_size"
+                android:layout_marginEnd="@dimen/view_size"
+                android:text="@string/candle79_com"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/websiteLine"
+
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/sstart_size"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/websitebottomLine"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/deliveryLine"
+                android:layout_width="@dimen/width_size"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_size"
+                android:layout_marginEnd="@dimen/end_size"
+                android:text="@string/delivery"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/websitebottomLine"
+
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/eatsimage"
+                android:layout_width="@dimen/main_title_size"
+                android:layout_height="@dimen/main_title_size"
+                android:layout_marginTop="@dimen/sstart_size"
+                android:background="@drawable/style"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/deliveryLine"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/ghimage"
+                android:layout_width="@dimen/main_title_size"
+                android:layout_height="@dimen/main_title_size"
+                android:layout_marginStart="@dimen/sstart_size"
+                android:layout_marginTop="@dimen/sstart_size"
+                android:background="@drawable/style"
+                app:layout_constraintStart_toEndOf="@id/eatsimage"
+                app:layout_constraintTop_toBottomOf="@id/deliveryLine"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/reviewsLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_size"
+                android:layout_marginEnd="@dimen/end_size"
+                android:text="@string/reviews"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eatsimage"
+
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/carnitostacoLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_size"
+                android:layout_marginEnd="@dimen/end_size"
+                android:text="@string/carnitas_taco"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/reviewsLine"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_size"
+                android:layout_marginBottom="@dimen/image_size"
+                android:text="@string/text"
+                android:textColor="@color/metr_350"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carnitostacoLine"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/width_size" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

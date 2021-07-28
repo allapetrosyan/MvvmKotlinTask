@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MvvmKotlinTask</string>
+    <string name="title">firstLineString</string>
+    <string name="firsLineString">Alex\'s Tacos and chichicken food</string>
+    <string name="deliverystring">Delivery</string>
+    <string name="birria_taco">Birria Taco</string>
+    <string name="heart">Heart</string>
+    <string name="share">Share</string>
+    <string name="directions">Directions</string>
+    <string name="adress">Adress</string>
+    <string name="_350_m">350 m</string>
+    <string name="_941_e_mission_blvd_pomona_ca_91766">941 E. Mission Blvd., Pomona, CA 91766</string>
+    <string name="website">Website</string>
+    <string name="candle79_com">candle79.com</string>
+    <string name="delivery">Delivery</string>
+    <string name="reviews">Reviews</string>
+    <string name="carnitas_taco">Carnitas Taco</string>
+    <string name="text">Eaters at this beachside joint recommend the simple and to the poitn carnitas taco â with a side of carnitas burrito for those with a big appetite.</string>
+</resources>
